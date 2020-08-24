@@ -1,0 +1,97 @@
+:root {
+    --primary-color: rgb(68, 68, 82);
+    --primary2-color:  rgba(68, 68, 82, 0.719);
+    --secondary-color: #644da7;
+    --link-color: #ab1b73;
+/* Font family variables */
+    --lato:'Lato', sans-serif;
+}
+
+html body {
+    background: url(/img/background.jpg) no-repeat center center;
+    background-size: cover;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    font-family : var(--lato);
+    line-height: 2;
+    color: var(--primary-color);
+}
+
+a {
+    color: var(--link-color);
+}
+
+a:hover {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.login-form {
+    padding-top: 25%;
+}
+
+.modal-content {
+    background: rgba(245, 245, 245, 0.801);
+    padding: 0 2rem;
+    border-radius: 2rem; 
+}
+
+/* image */
+
+.modal-content img {
+    width: 190px;
+    height: 200px;
+}
+
+.modal-content .img-profile {
+    margin: -6rem 0 1.5rem 4.8rem;
+    background: whitesmoke;
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+}
+
+.modal-content .heading {
+    font: bold 1.3rem var(--lato);
+    color: var(--primary2-color);
+}
+
+/* form */
+
+.form-group {
+    margin: 0 0 1.5rem 0;
+}
+
+.form-group input {
+    height: 3rem;
+    border-radius: .5rem;
+    border: 0;
+    font: 1.5rem;
+}
+
+/* button */
+
+.modal-content button {
+    margin: 1rem 0 1.5rem;
+    width: 40%;
+}
+
+.btn-success {
+    background: var(--link-color);
+    border-radius: .5rem;
+    border: none;
+    padding: 1rem 1rem;
+    font: bold 1rem var(--lato);
+    color: rgba(245, 245, 245, 0.801);
+}
+
+.btn-success:hover {
+    background: var(--secondary-color);
+    border: none;
+}
+
+.forgot {
+    padding: 0 0 1.5rem;
+}
