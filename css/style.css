@@ -7,8 +7,8 @@
     --lato:'Lato', sans-serif;
 }
 
-body {
-    background: url(..img/background.jpg) no-repeat center center;
+html body {
+    background: url(../img/background.jpg) no-repeat center center;
     background-size: cover;
     margin: 0;
     box-sizing: border-box;
@@ -17,6 +17,7 @@ body {
     font-family : var(--lato);
     line-height: 2;
     color: var(--primary-color);
+    font-sie: 14px;
 }
 
 a {
