@@ -7,7 +7,7 @@
     --lato:'Lato', sans-serif;
 }
 
-html body {
+html, body {
     background: url(..img/background.jpg) no-repeat center center;
     background-size: cover;
     margin: 0;
