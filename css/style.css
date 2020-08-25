@@ -95,3 +95,16 @@ a:hover {
 .forgot {
     padding: 0 0 1.5rem;
 }
+
+/* credit image */
+.credit {
+    margin: 0 2rem 0;
+}
+.credit p {
+    font-size: 12px;
+    color: rgba(245, 245, 245, 0.801);
+}
+
+.credit a {
+    color: rgba(245, 245, 245, 0.801);
+}
