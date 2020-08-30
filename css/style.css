@@ -1,20 +1,21 @@
 :root {
     --primary-color: rgb(68, 68, 82);
-    --primary2-color:  rgba(68, 68, 82, 0.719);
+    --primary2-color: rgba(68, 68, 82, 0.719);
     --secondary-color: #644da7;
     --link-color: #ab1b73;
-/* Font family variables */
-    --lato:'Lato', sans-serif;
+    /* Font family variables */
+    --lato: 'Lato', sans-serif;
 }
 
-html body {
-    background: url(/img/background.jpg) no-repeat center center;
+body {
+    background: url(../img/background.jpg) no-repeat center center;
     background-size: cover;
     margin: 0;
     box-sizing: border-box;
     width: 100%;
     height: 100%;
-    font-family : var(--lato);
+    font-size: 16px;
+    font-family: var(--lato);
     line-height: 2;
     color: var(--primary-color);
 }
@@ -29,62 +30,121 @@ a:hover {
 }
 
 .login-form {
-    padding-top: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
-.modal-content {
+.form-box {
     background: rgba(245, 245, 245, 0.801);
+    margin-top: 10%;
+    padding-top: 25%;
     padding: 0 2rem;
-    border-radius: 2rem; 
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* image */
 
-.modal-content img {
-    width: 190px;
-    height: 200px;
+.form-box img {
+    width: 150px;
 }
 
-.modal-content .img-profile {
-    margin: -6rem 0 1.5rem 4.8rem;
+.form-box .img-profile {
+    margin: -5rem 0 1.5rem 0;
     background: whitesmoke;
-    width: 190px;
-    height: 190px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
 }
 
-.modal-content .heading {
+
+/* form */
+
+.form-box .heading {
     font: bold 1.3rem var(--lato);
     color: var(--primary2-color);
 }
 
-/* form */
-
 .form-group {
-    margin: 0 0 1.5rem 0;
+    margin: 0 0 1rem 0;
+    position: relative;
+    width: 100%;
+    height: 60px;
+    text-align: left;
+    overflow: hidden;
+}
+
+.form-group label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 2px solid var(--link-color);
+}
+
+.form-group label::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 100%;
+    width: 100%;
+    border-bottom: 3px solid var(--secondary-color);
+    transform: translateX(-100%);
+    transition: transform .5s ease;
+}
+
+.content-name {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    transition: all .3s ease;
 }
 
 .form-group input {
+    background-color: transparent;
+    width: 100%;
     height: 3rem;
     border-radius: .5rem;
     border: 0;
-    font: 1.5rem;
+    padding-top: 30px;
+    color: var(--primary-color);
+    outline: none;
+}
+
+.form-group input:focus+.label-name .content-name,
+.form-group input:not(:placeholder-shown)+.label-name .content-name {
+    transform: translateY(-100%);
+    font-size: .8rem;
+    color: var(--secondary-color);
+}
+
+.form-group input:focus+.label-name::after,
+.form-group input:not(:placeholder-shown)+.label-name::after {
+    transform: translateX(0%);
+    font-size: .8rem;
+    color: var(--secondary-color);
 }
 
 /* button */
 
-.modal-content button {
-    margin: 1rem 0 1.5rem;
-    width: 40%;
-}
-
 .btn-success {
     background: var(--link-color);
-    border-radius: .5rem;
+    border-radius: 0;
+    width: 100%;
     border: none;
+    margin: 1rem 0;
     padding: 1rem 1rem;
     font: bold 1rem var(--lato);
     color: rgba(245, 245, 245, 0.801);
+    transition: all 1s ease-in-out;
 }
 
 .btn-success:hover {
@@ -100,6 +160,7 @@ a:hover {
 .credit {
     margin: 0 2rem 0;
 }
+
 .credit p {
     font-size: 12px;
     color: rgba(245, 245, 245, 0.801);
